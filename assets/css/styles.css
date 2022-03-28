@@ -2,10 +2,13 @@ body {
   font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
 }
-body header nav {
-  background-color: rgba(0, 0, 0, 0.8);
+body nav {
+  background-color: rgba(45, 45, 45, 0.99);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
-body header nav ul {
+body nav ul {
   padding-left: 15%;
   padding-right: 15%;
   margin: 0;
@@ -16,39 +19,182 @@ body header nav ul {
   align-items: center;
   align-content: center;
 }
-body header nav ul li {
+body nav ul li {
   padding: 0;
 }
-body header nav ul li a {
-  height: 100%;
-  margin: 0;
+body nav ul li a {
   color: rgba(255, 255, 255, 0.7);
   display: flex;
   text-decoration: none;
   font-size: 0.7em;
   letter-spacing: 0.05em;
 }
-body header nav ul li a:hover {
+body nav ul li a:hover {
   color: white;
 }
-body header .unicef {
+body nav ul li a img {
+  opacity: 80%;
+}
+body .unicef {
   background-color: #f5f5f7;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.85em;
 }
-body header .unicef a {
+body .unicef a {
   text-decoration: none;
   color: #0066cc;
 }
-body header .unicef a:hover {
+body .unicef a:hover {
   text-decoration: underline;
 }
-body header .unicef img {
+body .unicef img {
   display: inline-block;
   height: 32px;
   margin: 20px;
+}
+body main .main-elem {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+body main .main-elem .main-elem-texts {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .main-elem .main-elem-texts h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 3%;
+  margin-bottom: 0;
+}
+body main .main-elem .main-elem-texts h2 {
+  font-size: 1.5em;
+  font-weight: 200;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-weight: bolder;
+}
+body main .main-elem .main-elem-texts > .sublinks {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  pointer-events: none;
+}
+body main .main-elem .main-elem-texts > .sublinks > a {
+  z-index: 2;
+  pointer-events: all;
+}
+body main .main-elem .main-elem-texts > .sublinks > a:hover {
+  text-decoration: underline;
+}
+body main .main-elem img {
+  position: relative;
+  z-index: -1;
+  max-width: 230%;
+  object-fit: contain;
+  margin: 0;
+}
+body main .main-elem > a.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+body main .main-elem a {
+  text-decoration: none;
+  color: #0066cc;
+  font-size: 1.3em;
+}
+body main .small-elems-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+  align-self: center;
+  overflow: hidden;
+}
+body main .small-elems-container .small-elem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+  width: 49%;
+  margin: 0.5%;
+  overflow: hidden;
+}
+body main .small-elems-container .small-elem .small-elem-texts {
+  width: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .small-elems-container .small-elem .small-elem-texts h1 {
+  margin: 0;
+}
+body main .small-elems-container .small-elem .small-elem-texts h2 {
+  font-weight: 300;
+}
+body main .small-elems-container .small-elem .small-elem-texts > .sublinks {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  pointer-events: none;
+}
+body main .small-elems-container .small-elem .small-elem-texts > .sublinks > a {
+  z-index: 2;
+  pointer-events: all;
+}
+body main .small-elems-container .small-elem .small-elem-texts > .sublinks > a:hover {
+  text-decoration: underline;
+}
+body main .small-elems-container .small-elem img {
+  position: relative;
+  z-index: -1;
+  max-width: 150%;
+  object-fit: contain;
+}
+body main .small-elems-container .small-elem > a.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+body main .small-elems-container .small-elem a {
+  text-decoration: none;
+  color: #0066cc;
+  font-size: 1.3em;
+}
+body footer {
+  width: auto;
+  background-color: #f5f5f7;
+  padding: 0% 20% 0% 20%;
+}
+body footer p {
+  font-size: 0.7em;
+  color: #6e6e73;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+}
+body footer p > a {
+  color: #424245;
+  text-decoration: none;
+}
+body footer p > a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */
