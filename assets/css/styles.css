@@ -133,6 +133,7 @@ body main .small-elems-container .small-elem {
   width: 49%;
   margin: 0.5%;
   overflow: hidden;
+  position: relative;
 }
 body main .small-elems-container .small-elem .small-elem-texts {
   width: auto;
@@ -152,6 +153,7 @@ body main .small-elems-container .small-elem .small-elem-texts > .sublinks {
   justify-content: space-around;
   position: relative;
   pointer-events: none;
+  width: 300px;
 }
 body main .small-elems-container .small-elem .small-elem-texts > .sublinks > a {
   z-index: 2;
@@ -178,13 +180,18 @@ body main .small-elems-container .small-elem a {
   color: #0066cc;
   font-size: 1.3em;
 }
+body main .sublinks > a::after {
+  content: " >";
+  color: #0066cc;
+  text-decoration: none;
+}
 body footer {
   width: auto;
   background-color: #f5f5f7;
-  padding: 0% 20% 0% 20%;
+  padding: 1% 17% 2% 17%;
 }
 body footer p {
-  font-size: 0.7em;
+  font-size: 12px;
   color: #6e6e73;
   line-height: 1.5em;
   letter-spacing: 0.05em;
@@ -195,6 +202,101 @@ body footer p > a {
 }
 body footer p > a:hover {
   text-decoration: underline;
+}
+body footer .footer-box {
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  flex-wrap: wrap;
+}
+body footer .footer-box .footer-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body footer .footer-box .footer-column .footer-list {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body footer .footer-box .footer-column .footer-list h4 {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+}
+body footer .footer-box .footer-column .footer-list ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+body footer .footer-box .footer-column .footer-list ul li {
+  margin: 12px 0 0 0;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+body footer .footer-box .footer-column .footer-list ul li a {
+  text-decoration: none;
+  color: rgba(45, 45, 45, 0.95);
+}
+body footer .footer-box .footer-column .footer-list ul li a:hover {
+  text-decoration: underline;
+}
+body footer .copyright-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0 0;
+}
+body footer .copyright-nav p {
+  margin: 0;
+}
+body footer .copyright-nav .copyright-nav-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body footer .copyright-nav .copyright-nav-left .vertical {
+  transform: rotate(90deg);
+  width: 10px;
+  opacity: 50%;
+}
+body footer .copyright-nav .copyright-nav-left nav {
+  padding: 0;
+  margin: 0 30px 0 30px;
+  background-color: inherit;
+  top: 30%;
+  left: 0;
+  bottom: 30%;
+  right: 0;
+}
+body footer .copyright-nav .copyright-nav-left nav ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+body footer .copyright-nav .copyright-nav-left nav ul li {
+  padding: 0;
+}
+body footer .copyright-nav .copyright-nav-left nav ul li a {
+  color: rgba(45, 45, 45, 0.95);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+body footer .copyright-nav .copyright-nav-left nav ul li a:hover {
+  text-decoration: underline;
+}
+body footer .footer-bottom > a {
+  color: #0066cc;
 }
 
 /*# sourceMappingURL=styles.css.map */
